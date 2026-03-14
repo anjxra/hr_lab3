@@ -13,13 +13,8 @@ return [
     | incoming requests. Laravel supports a variety of storage options to
     | persist session data. Database storage is a great default choice.
     |
-<<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
-=======
-    | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "dynamodb", "array"
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     |
     */
 
@@ -37,11 +32,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'lifetime' => (int) env('SESSION_LIFETIME', 120),
-=======
-    'lifetime' => env('SESSION_LIFETIME', 120),
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
 
     'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 
@@ -106,11 +97,7 @@ return [
     | define the cache store which should be used to store the session data
     | between requests. This must match one of your defined cache stores.
     |
-<<<<<<< HEAD
     | Affects: "dynamodb", "memcached", "redis"
-=======
-    | Affects: "apc", "dynamodb", "memcached", "redis"
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     |
     */
 
@@ -138,19 +125,11 @@ return [
     | the framework. Typically, you should not need to change this value
     | since doing so does not grant a meaningful security improvement.
     |
-<<<<<<< HEAD
-=======
-    |
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     */
 
     'cookie' => env(
         'SESSION_COOKIE',
-<<<<<<< HEAD
-        Str::slug((string) env('APP_NAME', 'laravel')).'-session'
-=======
-        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
+        Str::slug((string) env('APP_NAME', 'laravel'), '_').'_session'
     ),
 
     /*
@@ -173,11 +152,7 @@ return [
     |
     | This value determines the domain and subdomains the session cookie is
     | available to. By default, the cookie will be available to the root
-<<<<<<< HEAD
-    | domain without subdomains. Typically, this shouldn't be changed.
-=======
     | domain and all subdomains. Typically, this shouldn't be changed.
->>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     |
     */
 
