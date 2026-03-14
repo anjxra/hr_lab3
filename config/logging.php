@@ -45,7 +45,11 @@ return [
     | utilizes the Monolog PHP logging library, which includes a variety
     | of powerful log handlers and formatters that you're free to use.
     |
+<<<<<<< HEAD
     | Available drivers: "single", "daily", "slack", "syslog",
+=======
+    | Available Drivers: "single", "daily", "slack", "syslog",
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     |                    "errorlog", "monolog", "custom", "stack"
     |
     */
@@ -54,7 +58,11 @@ return [
 
         'stack' => [
             'driver' => 'stack',
+<<<<<<< HEAD
             'channels' => explode(',', (string) env('LOG_STACK', 'single')),
+=======
+            'channels' => explode(',', env('LOG_STACK', 'single')),
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
             'ignore_exceptions' => false,
         ],
 
@@ -98,10 +106,17 @@ return [
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
+<<<<<<< HEAD
             'handler_with' => [
                 'stream' => 'php://stderr',
             ],
             'formatter' => env('LOG_STDERR_FORMATTER'),
+=======
+            'formatter' => env('LOG_STDERR_FORMATTER'),
+            'with' => [
+                'stream' => 'php://stderr',
+            ],
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
             'processors' => [PsrLogMessageProcessor::class],
         ],
 

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
@@ -13,5 +14,17 @@
         "laravel-vite-plugin": "^2.0.0",
         "tailwindcss": "^4.0.0",
         "vite": "^7.0.7"
+=======
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0",
+        "vite": "^5.0"
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     }
 }

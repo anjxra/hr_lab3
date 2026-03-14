@@ -24,8 +24,12 @@ return [
     | used by your application. An example configuration is provided for
     | each backend supported by Laravel. You're also free to add more.
     |
+<<<<<<< HEAD
     | Drivers: "sync", "database", "beanstalkd", "sqs", "redis",
     |          "deferred", "background", "failover", "null"
+=======
+    | Drivers: "sync", "database", "beanstalkd", "sqs", "redis", "null"
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     |
     */
 
@@ -37,10 +41,17 @@ return [
 
         'database' => [
             'driver' => 'database',
+<<<<<<< HEAD
             'connection' => env('DB_QUEUE_CONNECTION'),
             'table' => env('DB_QUEUE_TABLE', 'jobs'),
             'queue' => env('DB_QUEUE', 'default'),
             'retry_after' => (int) env('DB_QUEUE_RETRY_AFTER', 90),
+=======
+            'connection' => env('DB_QUEUE_CONNECTION', null),
+            'table' => env('DB_QUEUE_TABLE', 'jobs'),
+            'queue' => env('DB_QUEUE', 'default'),
+            'retry_after' => env('DB_QUEUE_RETRY_AFTER', 90),
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
             'after_commit' => false,
         ],
 
@@ -48,7 +59,11 @@ return [
             'driver' => 'beanstalkd',
             'host' => env('BEANSTALKD_QUEUE_HOST', 'localhost'),
             'queue' => env('BEANSTALKD_QUEUE', 'default'),
+<<<<<<< HEAD
             'retry_after' => (int) env('BEANSTALKD_QUEUE_RETRY_AFTER', 90),
+=======
+            'retry_after' => env('BEANSTALKD_QUEUE_RETRY_AFTER', 90),
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
             'block_for' => 0,
             'after_commit' => false,
         ],
@@ -68,11 +83,16 @@ return [
             'driver' => 'redis',
             'connection' => env('REDIS_QUEUE_CONNECTION', 'default'),
             'queue' => env('REDIS_QUEUE', 'default'),
+<<<<<<< HEAD
             'retry_after' => (int) env('REDIS_QUEUE_RETRY_AFTER', 90),
+=======
+            'retry_after' => env('REDIS_QUEUE_RETRY_AFTER', 90),
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
             'block_for' => null,
             'after_commit' => false,
         ],
 
+<<<<<<< HEAD
         'deferred' => [
             'driver' => 'deferred',
         ],
@@ -89,6 +109,8 @@ return [
             ],
         ],
 
+=======
+>>>>>>> 7b65b9ebd5b79d323c4963d2dc09074109e8363b
     ],
 
     /*
